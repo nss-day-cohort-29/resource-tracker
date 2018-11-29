@@ -87,3 +87,22 @@ let createAndAppendResources = () => {
 }
 
 createAndAppendResources();
+
+let addButton = document.querySelector("#add-button");
+addButton.addEventListener("click", () => {
+  console.log("Button was clicked");
+
+  let resourceName = document.querySelector('input[name="resourcename"]').value;
+  let resourceLink = document.querySelector('input[name="resourcelink"]').value;
+  let resourceType = document.querySelector('input[name="resourcetype"]:checked').value;
+
+  console.log("Input values: ", resourceName, resourceLink, resourceType);
+
+  let resource = {
+    name: resourceName,
+    link: resourceLink,
+    type: resourceType
+  }
+
+  resourcesArray.push(resource);
+})
