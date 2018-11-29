@@ -68,6 +68,8 @@ let createAndAppendResources = () => {
   // for(let i = 0; i < resourcesArray.length; i++){
   //   console.log(resourcesArray[i]);
   // }
+  articlesContainer.innerHTML = "";
+  videosContainer.innerHTML = "";
 
   resourcesArray.forEach(function(resourceObj){
     console.log(resourceObj);
@@ -105,4 +107,5 @@ addButton.addEventListener("click", () => {
   }
 
   resourcesArray.push(resource);
+  createAndAppendResources();
 })
