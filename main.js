@@ -1,3 +1,25 @@
+let formContainer = document.querySelector("#form-container");
+
+formContainer.innerHTML = `<section>
+<label for="resourcename">Resource Name</label>
+<input type="text" name="resourcename" id="resource-name">
+</section>
+
+<section>
+<label for="resourcelink">Resource Link</label>
+<input type="text" name="resourcelink" id="resource-link">
+</section>
+
+<section>
+<label for="resourcetype">Resource Type</label>
+<input type="radio" name="resourcetype" value="Video" checked> Video
+<input type="radio" name="resourcetype" value="Article"> Article<br>
+</section>
+
+<section>
+  <button type="button" id="add-button">Add Resource</button>
+</section>`;
+
 const videosContainer = document.createElement("section");
 videosContainer.classList.add("videos-container");
 const articlesContainer = document.createElement("section");
